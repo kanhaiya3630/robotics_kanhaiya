@@ -106,6 +106,34 @@ header .banner-img {
   margin-right: 1rem;
 }
 
+@media (max-width: 700px) {
+  .r-logo{
+    height: auto;
+    width: 70px;
+    position: relative;
+    top: -4.7rem;
+  }
+  .l-logo{
+    height: auto;
+    width: 70px;
+  }
+ header .banner-img{
+  position: relative;
+  height: auto;
+  width: 250px;
+  top: 3rem;
+  margin-bottom: 2rem;
+ }  
+
+ .hea{
+  font-size: 150%;
+  position: relative;
+  top: 2rem;
+ }
+
+
+}
+
 
 /* .logo {
   width: 60px;
