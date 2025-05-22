@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Mechanical Turk",
     img: "images/page12_img3.jpeg",
-    description: "The Mechanical Turk was historically a machine that appeared to play chess autonomously, but in reality, it had a chess master hidden underneath, secretly controlling its movements.We, of course, won’t be hiding a chess master under a table—mainly because we don’t have one. Instead, as engineers, it’s much more feasible (and fun) for us to build a robot that actually plays chess. So if you ever feel that playing chess over the board is far more satisfying than playing online, come pay the Turk a visit."
+    description: "The Mechanical Turk was historically a machine that appeared to play chess autonomously, but in reality, it had a chess master hidden underneath, secretly controlling its movements. We, of course, won’t be hiding a chess master under a table ,rather we will be building a robot that actually plays chess."
   },
   
   {
