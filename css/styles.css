@@ -1,0 +1,246 @@
+/* Reset and Base Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .header-logos {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6fa;
+  color: #333;
+  line-height: 1.6;
+  transition: background 0.3s ease;
+}
+
+/* Navbar */
+header {
+  background: linear-gradient(135deg, #50689f, #0e308d);
+  color: white;
+  padding: 40px 20px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.highlight-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #facc15; /* Yellow */
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #50689f, #0e308d);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.highlight-heading::before {
+  content: "🌞 ";
+  animation: spin 3s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+header .banner-img {
+  width: 300px;
+  max-width: 90%;
+  margin-bottom: 20px;
+  opacity: 0.95;
+  animation: fadeIn 1.2s ease-in-out;
+}
+.header-logos {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.logo-wrapper {
+  /* background: linear-gradient(135deg, #50689f, #0e308d); */
+  /* padding: 10px; */
+  /* border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); */
+}
+
+.logo-wrapper.left {
+  align-self: flex-start;
+}
+
+.logo-wrapper.right {
+  align-self: flex-end;
+}
+
+.l-logo {
+  width:100px;
+  height: auto;
+  display: block;
+  margin-left: -2rem;
+}
+.r-logo {
+  width:100px;
+  height: auto;
+  display: block;
+  margin-right: 1rem;
+}
+
+
+/* .logo {
+  width: 60px;
+  height: auto;
+}
+
+.left-logo {
+  align-self: flex-start;
+}
+
+.right-logo {
+  align-self: flex-end;
+} */
+
+
+header h1,
+header h3 {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* 
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+header h3 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  opacity: 0.8;
+} */
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.profile img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0f172a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile div {
+  flex: 1;
+}
+
+.profile h2 {
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;              
+  object-position: center;
+  background-color: #050505; 
+  /* background: linear-gradient(to bottom, #021b3f, #111111); */
+  padding: 10px;                  
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+
+.project h4 {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+  margin: 15px;
+}
+
+.project p {
+  font-size: 0.95rem;
+  margin: 0 15px 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile img {
+    margin-bottom: 15px;
+  }
+}
